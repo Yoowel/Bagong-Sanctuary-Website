@@ -1,86 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bagong Sanctuary menyediakan berbagai patung fiber rohani.">
+    <meta name="description" content="Bagong Sanctuary menyediakan berbagai patung fiber rohani Katolik.">
+    <meta name="theme-color" content="#F8F6F1">
+
     <title>Bagong Sanctuary</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 
-    <header class="navbar">
-        <a href="#" class="logo">Bagong Sanctuary</a>
+    <a href="#beranda" class="skip-link">Lewati ke konten</a>
 
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Buka menu"
-                aria-expanded="false">
+    <header class="navbar">
+        <a href="#beranda" class="logo" aria-label="Bagong Sanctuary Beranda">
+            BAGONG <span>Sanctuary</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            type="button">
             ☰
         </button>
 
-        <nav class="nav-links" id="nav-links">
+        <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
             <a href="#beranda">Beranda</a>
-            <a href="#produk">Produk</a>
+            <a href="#produk">Koleksi</a>
             <a href="#tentang">Tentang Kami</a>
             <a href="#lokasi">Lokasi</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero" id="beranda">
+    <main id="beranda">
+
+        <section class="hero wrap">
             <div class="hero-content">
-                <span class="eyebrow">Selamat Datang di Bagong Sanctuary</span>
+                <span class="eyebrow">Bagong Sanctuary · Patung Rohani</span>
 
-                <h1>Patung Rohani Katolik</h1>
+                <h1>Patung Rohani</h1>
 
-                <p>
-                    Menyediakan berbagai patung fiber rohani
-                    dengan kualitas terbaik
+                <p class="lead">
+                    Menyediakan berbagai produk patung rohani
                 </p>
+
+                <div class="hero-actions">
+                    <a href="#produk" class="button">
+                        Koleksi
+                    </a>
+
+                    <a href="#tentang" class="button button-outline">
+                        Tentang Kami
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Koleksi patung rohani">
+                <div class="visual-frame">
+                    <span class="visual-symbol" aria-hidden="true">✝</span>
+                    <span class="visual-caption">
+                        Koleksi Patung Rohani
+                    </span>
+                </div>
+
+                <div class="visual-frame secondary">
+                    <span class="visual-symbol" aria-hidden="true">✝</span>
+                    <span class="visual-caption">
+                        Sacred Art
+                    </span>
+                </div>
             </div>
         </section>
 
-
-        <section class="section" id="produk">
+        <section class="section wrap" id="produk">
             <div class="section-heading">
-                <span class="eyebrow">Koleksi Pilihan</span>
-                <h2>Produk Unggulan</h2>
-                <p>
-                    Beberapa pilihan patung rohani dari Bagong Sanctuary.
-                </p>
+                <div class="heading-copy">
+                    <span class="eyebrow">Koleksi Pilihan</span>
+                    <h2>Produk</h2>
+                    <p>
+                        Kumpulan koleksi patung rohani yang tersedia di Bagong Sanctuary
+                    </p>
+                </div>
             </div>
 
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-image">
-                        <span>Foto Produk</span>
-                    </div>
+                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Yesus">
+                        <div class="product-image">
+                            <span class="visual-symbol" aria-hidden="true">✝</span>
+                            <span>Foto produk</span>
+                        </div>
+                    </a>
+
                     <div class="product-info">
-                        <h3>Patung</h3>
-                        <p>deskripsi</p>
+                        <div>
+                            <h3>Patung Yesus</h3>
+                            <p>Koleksi patung rohani</p>
+                        </div>
                     </div>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">
-                        <span>Foto Produk</span>
-                    </div>
+                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Bunda Maria">
+                        <div class="product-image">
+                            <span class="visual-symbol" aria-hidden="true">✧</span>
+                            <span>Foto produk</span>
+                        </div>
+                    </a>
+
                     <div class="product-info">
-                        <h3>Patung</h3>
-                        <p>deskripsi</p>
+                        <div>
+                            <h3>Patung Bunda Maria</h3>
+                            <p>Koleksi devosi Maria</p>
+                        </div>
                     </div>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">
-                        <span>Foto Produk</span>
-                    </div>
+                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Santo">
+                        <div class="product-image">
+                            <span class="visual-symbol" aria-hidden="true">✝</span>
+                            <span>Foto produk</span>
+                        </div>
+                    </a>
+
                     <div class="product-info">
-                        <h3>Patung</h3>
-                        <p>deskripsi</p>
+                        <div>
+                            <h3>Patung Para Santo</h3>
+                            <p>Koleksi orang kudus</p>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -88,38 +141,85 @@
             <div class="catalog-action">
                 <a href="{{ route('katalog') }}" class="button button-outline">
                     Lihat Semua Produk
-                    <span aria-hidden="true">&rarr;</span>
+                    <span aria-hidden="true">→</span>
                 </a>
             </div>
         </section>
 
         <section class="about" id="tentang">
-            <div class="about-content">
-                <span class="eyebrow">Tentang Kami</span>
-                <h2>Mengenal Bagong Sanctuary</h2>
-                <p>
-                    Bagong Sanctuary
-                </p>
+            <div class="wrap about-content">
+                <div>
+                    <span class="eyebrow">Tentang Kami</span>
+                    <h2>MENYEDIAKAN PRODUK ROHANI BERKUALITAS</h2>
+                </div>
+
+                <div class="about-copy">
+                    <p>
+                        Bagong Sanctuary menghadirkan koleksi patung
+                        rohani Katolik untuk membantu umat menghidupkan
+                        nilai iman dalam kehidupan sehari-hari.
+                    </p>
+
+                    <p>
+                        Kami ingin setiap karya memiliki tempat yang
+                        bermakna, baik di rumah, ruang doa, maupun tempat
+                        ibadah.
+                    </p>
+
+                    <a href="#lokasi" class="button">
+                        Temukan Kami
+                    </a>
+                </div>
             </div>
         </section>
 
         <section class="section location" id="lokasi">
-            <div class="section-heading">
-                <span class="eyebrow">Temukan Kami</span>
-                <h2>Lokasi Toko</h2>
-                <p>
-                    Kunjungi toko kami untuk mendapatkan informasi
-                    lebih lanjut mengenai produk.
-                </p>
-                <p class="location-note">
-                    map
-                </p>
+            <div class="wrap">
+                <div class="section-heading">
+                    <span class="eyebrow">Temukan Kami</span>
+                    <h2>Kunjungi Bagong Sanctuary.</h2>
+                </div>
+
+                <div class="location-note">
+                    Lokasi toko akan ditampilkan di sini
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Bagong Sanctuary.</p>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#beranda" class="logo">
+                        BAGONG <span>Sanctuary</span>
+                    </a>
+
+                    <p>
+                        Koleksi patung rohani Katolik
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Navigasi</h3>
+                    <a href="#beranda">Beranda</a>
+                    <a href="#produk">Koleksi</a>
+                    <a href="#tentang">Tentang Kami</a>
+                </div>
+
+                <div>
+                    <h3>Informasi</h3>
+                    <a href="{{ route('katalog') }}">Katalog Produk</a>
+                    <a href="#lokasi">Lokasi Toko</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> Bagong Sanctuary.
+                Hak cipta dilindungi.
+            </div>
+        </div>
     </footer>
 
 </body>
