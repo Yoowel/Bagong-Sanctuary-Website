@@ -40,52 +40,47 @@
                 </p>
             </div>
 
-            <!-- Daftar produk -->
-            <div class="product-grid">
+        <!-- Daftar produk -->
+        <div class="product-grid">
+
+            @forelse ($products as $product)
 
                 <article class="product-card">
                     <div class="product-image">
-                        <span>Foto Produk</span>
+                        @if ($product->image)
+                            <img
+                                src="{{ asset('storage/' . $product->image) }}"
+                                alt="{{ $product->name }}"
+                            >
+                        @else
+                            <span>Foto Produk</span>
+                        @endif
                     </div>
 
                     <div class="product-info">
                         <span class="eyebrow">KOLEKSI</span>
-                        <h2>Patung Rohani</h2>
+
+                        <h2>{{ $product->name }}</h2>
+
                         <p>
-                            Deskripsi produk akan ditampilkan di sini.
+                            {{ $product->description }}
+                        </p>
+
+                        <p class="product-price">
+                            Rp {{ number_format($product->price, 0, ',', '.') }}
                         </p>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-image">
-                        <span>Foto Produk</span>
-                    </div>
+            @empty
 
-                    <div class="product-info">
-                        <span class="eyebrow">KOLEKSI</span>
-                        <h2>Patung Rohani</h2>
-                        <p>
-                            Deskripsi produk akan ditampilkan di sini.
-                        </p>
-                    </div>
-                </article>
+                <p class="empty-message">
+                    Belum ada produk yang tersedia.
+                </p>
 
-                <article class="product-card">
-                    <div class="product-image">
-                        <span>KOLEKSI</span>
-                    </div>
+            @endforelse
 
-                    <div class="product-info">
-                        <span class="eyebrow">KOLEKSI</span>
-                        <h2>Patung Rohani</h2>
-                        <p>
-                            Deskripsi produk akan ditampilkan di sini.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
+        </div>
 
             <!-- Navigasi kembali -->
             <div class="catalog-action">
@@ -99,8 +94,7 @@
     <!-- Footer -->
     <footer class="footer">
         <p>
-            &copy; <span id="year"></span> Bagong Sanctuary.
-            Seluruh hak cipta dilindungi.
+            &copy; <span id="year"></span> Bagong Sanctuary. Seluruh hak cipta dilindungi.
         </p>
     </footer>
 

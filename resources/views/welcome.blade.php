@@ -90,9 +90,7 @@
 
             <div class="product-grid">
                 <article class="product-card">
-                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Yesus">
                         <div class="product-image">
-                            <span class="visual-symbol" aria-hidden="true">✝</span>
                             <span>Foto produk</span>
                         </div>
                     </a>
@@ -106,9 +104,7 @@
                 </article>
 
                 <article class="product-card">
-                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Bunda Maria">
                         <div class="product-image">
-                            <span class="visual-symbol" aria-hidden="true">✧</span>
                             <span>Foto produk</span>
                         </div>
                     </a>
@@ -122,9 +118,7 @@
                 </article>
 
                 <article class="product-card">
-                    <a href="{{ route('katalog') }}" aria-label="Lihat koleksi patung Santo">
                         <div class="product-image">
-                            <span class="visual-symbol" aria-hidden="true">✝</span>
                             <span>Foto produk</span>
                         </div>
                     </a>
@@ -136,10 +130,24 @@
                         </div>
                     </div>
                 </article>
+
+                <article class="product-card">
+                        <div class="product-image">
+                            <span>Foto produk</span>
+                        </div>
+                    </a>
+
+                    <div class="product-info">
+                        <div>
+                            <h3>Patung Para Santo</h3>
+                            <p>Koleksi orang kudus</p>
+                        </div>
+                    </div>
+                </article>                
             </div>
 
             <div class="catalog-action">
-                <a href="{{ route('katalog') }}" class="button button-outline">
+                <a href="{{ route('catalog') }}" class="button button-outline">
                     Lihat Semua Produk
                     <span aria-hidden="true">→</span>
                 </a>
@@ -210,7 +218,7 @@
 
                 <div>
                     <h3>Informasi</h3>
-                    <a href="{{ route('katalog') }}">Katalog Produk</a>
+                    <a href="{{ route('catalog') }}">Katalog Produk</a>
                     <a href="#lokasi">Lokasi Toko</a>
                 </div>
             </div>

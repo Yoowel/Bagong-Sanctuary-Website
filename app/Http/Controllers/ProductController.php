@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Product;
+
+class ProductController extends Controller
+{
+    public function index() 
+    {
+        $products = Product::all();
+        return view('catalog', compact('products'));
+    }
+
+    public function getRandomId() 
+    {
+        $products = Product::inRandomOrder()->first();
+
+        return $products?->id;
+    }
+}
