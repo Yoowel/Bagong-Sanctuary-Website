@@ -10,7 +10,7 @@ class ProductController extends Controller
     public function index() 
     {
         $products = Product::all();
-        return view('catalog', compact('products'));
+        return view('katalog', compact('products'));
     }
 
     public function getRandomId() 
