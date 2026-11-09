@@ -6,4 +6,4 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/catalog', [ProductController::class, 'index'])->name('catalog');
+Route::get('/katalog', [ProductController::class, 'index'])->name('katalog');

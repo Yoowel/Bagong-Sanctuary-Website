@@ -35,8 +35,7 @@
                 <h1>Katalog Patung Rohani</h1>
 
                 <p class="lead">
-                    Temukan patung rohani yang sesuai untuk ruang doa,
-                    rumah, maupun tempat ibadah.
+                    Temukan patung rohani
                 </p>
             </div>
 

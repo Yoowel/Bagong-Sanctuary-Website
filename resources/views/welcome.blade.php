@@ -62,17 +62,9 @@
 
             <div class="hero-visual" aria-label="Koleksi patung rohani">
                 <div class="visual-frame">
-                    <span class="visual-symbol" aria-hidden="true">✝</span>
-                    <span class="visual-caption">
-                        Koleksi Patung Rohani
-                    </span>
                 </div>
 
                 <div class="visual-frame secondary">
-                    <span class="visual-symbol" aria-hidden="true">✝</span>
-                    <span class="visual-caption">
-                        Sacred Art
-                    </span>
                 </div>
             </div>
         </section>
@@ -147,7 +139,7 @@
             </div>
 
             <div class="catalog-action">
-                <a href="{{ route('catalog') }}" class="button button-outline">
+                <a href="{{ route('katalog') }}" class="button button-outline">
                     Lihat Semua Produk
                     <span aria-hidden="true">→</span>
                 </a>
@@ -164,14 +156,12 @@
                 <div class="about-copy">
                     <p>
                         Bagong Sanctuary menghadirkan koleksi patung
-                        rohani Katolik untuk membantu umat menghidupkan
-                        nilai iman dalam kehidupan sehari-hari.
+                        rohani Katolik
                     </p>
 
                     <p>
-                        Kami ingin setiap karya memiliki tempat yang
-                        bermakna, baik di rumah, ruang doa, maupun tempat
-                        ibadah.
+                        Bagong Sanctuary menghadirkan koleksi patung
+                        rohani Katolik
                     </p>
 
                     <a href="#lokasi" class="button">
@@ -189,7 +179,7 @@
                 </div>
 
                 <div class="location-note">
-                    Lokasi toko akan ditampilkan di sini
+                    Lokasi toko
                 </div>
             </div>
         </section>
@@ -218,7 +208,7 @@
 
                 <div>
                     <h3>Informasi</h3>
-                    <a href="{{ route('catalog') }}">Katalog Produk</a>
+                    <a href="{{ route('katalog') }}">Katalog Produk</a>
                     <a href="#lokasi">Lokasi Toko</a>
                 </div>
             </div>

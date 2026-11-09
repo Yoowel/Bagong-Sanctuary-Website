@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,11 +14,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+
             $table->string('name');
             $table->decimal('price', 12, 2);
             $table->text('description')->nullable();
             $table->string('image_path')->nullable();
             $table->boolean('is_active')->default(true);
+
             $table->timestamps();
         });
     }
